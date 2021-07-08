@@ -1,11 +1,10 @@
 .navbar {
-  background-color: $color-primary;
+  background-color: $color-white;
   margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   max-width: 100%;
   height: 9.6vh;
   position: relative;
@@ -16,7 +15,7 @@
     }
     &__logo {
       display: inline-block;
-      margin: 0;
+      margin-right: 4rem;
       &__link {
         &__img {
           height: 6rem;
@@ -27,8 +26,16 @@
   }
 
   &__nav {
-    justify-content: flex-end;
-
+    margin-left: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    &__button {
+      background-color: $color-tertiary-dark;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
     &__list {
       margin: 0;
       padding-left: 0;
@@ -39,21 +46,21 @@
         list-style: none;
         float: left;
         & .active {
-          padding-bottom: 0.8rem;
-          border-bottom: 0.2rem solid $color-secondary;
+          color: $color-tertiary;
+          font-weight: 600;
         }
         &:not(:last-child) {
           margin-right: 4.8rem;
         }
 
         &__link {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           text-transform: uppercase;
-          color: $color-white;
-          font-weight: 300;
+          color: $color-black;
+          font-weight: 400;
           &:hover {
-            padding-bottom: 0.8rem;
-            border-bottom: 0.2rem solid $color-secondary;
+            color: $color-tertiary;
+            font-weight: 600;
           }
         }
       }
@@ -73,11 +80,17 @@
       &__logo {
         margin: 0;
         padding: 0;
+        &__link {
+          &__img {
+            height: 8rem;
+            width: 8rem;
+          }
+        }
       }
 
       &__menu {
         &__bar {
-          background-color: $color-white;
+          background-color: $color-tertiary-dark;
           width: 3rem;
           height: 0.2rem;
           margin: 0.8rem 0;
@@ -141,7 +154,19 @@
     &__nav {
       display: none;
       position: static;
-      padding-left: 3.2rem;
+      padding-left: 0;
+      width: 100%;
+      &__button {
+        background-color: $color-white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 2.1rem;
+        padding-left: 3.2rem;
+        padding-top: 0.8rem;
+        color: $color-black !important;
+        border: none;
+        font-weight: 400;
+      }
       &__toggle {
         display: block;
       }
@@ -151,24 +176,19 @@
         align-items: flex-start;
         margin: 0;
         padding: 0;
+        padding-left: 3.2rem;
 
         &__item {
           & .active {
-            border-left: 0.2rem solid $color-secondary;
-            padding: 0 0 0 1.6rem;
-            border-bottom: 0;
           }
           list-style: none;
           float: none;
           padding: 1.6rem 0;
 
           &__link {
-            color: $color-white;
+            color: $color-black;
             font-size: 2.1rem;
             &:hover {
-              padding-left: 1.6rem;
-              border-left: 0.2rem solid $color-secondary;
-              border-bottom: 0;
             }
           }
         }
@@ -176,114 +196,6 @@
     }
   }
 
-  @media (min-width: 576px) and (max-width: 768px) {
-    display: block;
-    padding: 0;
-    &__mobile {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.6rem 2.4rem;
-
-      &__logo {
-        margin: 0;
-        padding: 0;
-      }
-
-      &__menu {
-        &__bar {
-          background-color: $color-primary;
-          width: 3rem;
-          height: 0.2rem;
-          margin: 0.8rem 0;
-          padding: 0;
-
-          &__hide {
-            animation: bar-hide 1s linear forwards;
-          }
-
-          @keyframes bar-hide {
-            0% {
-              width: 0px;
-              height: 0px;
-            }
-
-            100% {
-              width: 0px;
-              height: 0px;
-            }
-          }
-
-          &__cross {
-            animation: bar-cross-left 0.5s linear forwards;
-          }
-
-          @keyframes bar-cross-left {
-            10% {
-              transform: rotate(45deg) translate(4px, 4px);
-            }
-
-            50% {
-              transform: rotate(45deg) translate(7px, 7px);
-            }
-
-            100% {
-              transform: rotate(45deg) translate(3px, 2px);
-            }
-          }
-
-          &__across {
-            animation: bar-cross-right 0.5s linear forwards;
-          }
-
-          @keyframes bar-cross-right {
-            10% {
-              transform: rotate(-45deg);
-            }
-
-            60% {
-              transform: rotate(-45deg) translate(-3px, 3px);
-            }
-
-            100% {
-              transform: rotate(-45deg) translate(1px, -2px);
-            }
-          }
-        }
-      }
-    }
-
-    &__nav {
-      display: none;
-      position: static;
-      &__toggle {
-        display: block;
-      }
-
-      &__list {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0;
-
-        &__item {
-          & .active {
-            // border-left: 1.5px solid $color-secondary;
-            padding: 0 0 0 0.5rem;
-            border-bottom: 0;
-          }
-          list-style: none;
-          float: none;
-          padding: 2% 5%;
-
-          &__link {
-            font-size: 1.8rem;
-          }
-        }
-      }
-    }
-  }
   @media all and (min-width: 1024px) and (max-width: 1440px) {
     padding: 0;
   }
@@ -293,238 +205,79 @@
   }
 }
 
-.top__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5.6rem;
-  .heading-5 {
-    font-weight: 600;
-  }
-  &__left {
-    display: flex;
-    &__facebook {
-      display: flex;
-      margin-right: 3.2rem;
-      & img {
-        margin-right: 0.8rem;
-      }
-    }
-    &__phone {
-      display: flex;
-      & img {
-        margin-right: 0.8rem;
-      }
-    }
-  }
-
-  &__right {
-    display: flex;
-    &__time {
-      display: flex;
-      & img {
-        margin-right: 0.8rem;
-      }
-    }
-  }
-  @media (min-width: 320px) and (max-width: 576px) {
-    padding: 1.6rem 3.2rem;
-    flex-direction: column;
-    align-items: unset;
-    height: unset;
-    &__left {
-      flex-direction: column;
-      & > * {
-        margin-bottom: 0.8rem;
-      }
-      &__facebook {
-        & .heading-5 {
-          font-weight: 600;
-        }
-      }
-      &__phone {
-        & .heading-5 {
-          font-weight: 600;
-        }
-      }
-    }
-    &__right {
-      &__time {
-        & .heading-5 {
-          font-weight: 600;
-        }
-      }
-    }
-  }
-}
-
 .footer {
-  display: flex;
-  flex-direction: column;
-  background-color: $color-primary;
+  background-color: $color-tertiary-dark;
+  padding: 7.2rem 0;
   color: $color-white;
-  padding: 8rem 0;
-  &__seperator {
-    margin: 4.8rem 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+    width: 35%;
     background-color: $color-white;
-    // height: 0.1rem;
-  }
-  &__top {
-    display: flex;
-    justify-content: space-between;
-
-    &__col {
-      display: flex;
-      flex-direction: column;
-      & .heading-4 {
-        text-transform: uppercase;
-        font-weight: 400;
-        margin-bottom: 2.4rem;
-        // font-family: $font-secondary;
-      }
-      & a {
-        color: $color-white;
-      }
-      & .paragraph {
-        margin-bottom: 1.6rem;
-        font-weight: 300;
-      }
-      &__text {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 1.6rem;
-        & .paragraph {
-          color: $color-white;
-          width: 32rem;
-          margin-left: 1.6rem;
-          margin-bottom: 0;
-        }
-      }
-
-      &__form-group {
-        display: flex;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        & input {
-          height: 4.8rem;
-          border: none;
-          border-radius: 0;
-          outline: none;
-          background-color: $color-white;
-          font-size: 1.6rem;
-          padding-left: 1.6rem;
-        }
-        & .btn {
-          background-color: $color-white;
-          height: 4.8rem;
-          width: 4.8rem;
-          cursor: pointer;
-          margin: 0;
-          padding: 0;
-        }
-      }
+    border-top: 1.6rem solid $color-secondary;
+    padding: 4rem;
+    border-radius: 0.2rem;
+    &__text {
+      color: $color-black;
+      margin: 2.4rem 0;
     }
-  }
-
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    & .paragraph {
-      font-weight: 300;
-    }
-    &__social-media {
+    &__icons {
+      width: 10rem;
       display: flex;
       justify-content: space-between;
-      &__icon {
-        // padding: 0.4rem 0.4rem 0 0.4rem;
-        background-color: $color-white;
-        border-radius: 100%;
+      & .svg {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__column {
+    width: 25%;
+    &__header {
+      margin-bottom: 2.4rem;
+    }
+    &__list {
+      list-style: none;
+      & > * {
         &:not(:last-child) {
-          margin-right: 3.2rem;
+          margin-bottom: 0.8rem;
         }
+      }
+      &__item {
+        display: flex;
+        align-items: flex-end;
       }
     }
   }
   @media (min-width: 320px) and (max-width: 576px) {
-    padding: 7.2rem 3.2rem 3.2rem 3.2rem;
-    width: 100%;
-    // height: 100%;
-    &__top {
+    &__container {
       flex-direction: column;
-      &__col {
+      padding: 3.2rem;
+      & > * {
+        width: 100%;
         margin-bottom: 3.2rem;
-        &__form-group {
-          width: 90%;
-          & input {
-            width: 100%;
-          }
-        }
-        @media (min-width: 400px) and (max-width: 576px) {
-          & .heading-4 {
-            font-size: 2.1rem;
-          }
-          & .paragraph {
-            font-size: 2.1rem;
-          }
-          &__text {
-            & .paragraph {
-              width: auto;
-            }
-          }
-        }
       }
     }
-    &__seperator {
-      margin: 2.4rem 0;
-    }
-    &__bottom {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      & .paragraph {
-        margin-top: 3.2rem;
-      }
-    }
-  }
 
-  @media (min-width: 576px) and (max-width: 768px) {
-    padding: 4.8rem 3.2rem;
-    width: 100%;
-    height: 100%;
-    &__top {
-      flex-direction: column;
-      &__col {
-        margin-bottom: 3.2rem;
-        &__form-group {
-          width: 90%;
-          & input {
-            width: 100%;
-          }
-        }
-        @media (min-width: 400px) and (max-width: 576px) {
-          & .heading-4 {
-            font-size: 2.1rem;
-          }
-          & .paragraph {
-            font-size: 2.1rem;
-          }
-          &__text {
-            & .paragraph {
-              width: auto;
-            }
-          }
-        }
+    &__main {
+      padding: 3.2rem;
+      &__icons {
+        width: 16rem;
       }
     }
-    &__seperator {
-      margin: 2.4rem 0;
-    }
-    &__bottom {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      & .paragraph {
-        margin-top: 3.2rem;
+
+    &__column {
+      &__header {
+        margin-bottom: 1.6rem;
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        &__item:nth-of-type(1) {
+          margin-top: 1.6rem;
+          order: 3;
+        }
       }
     }
   }

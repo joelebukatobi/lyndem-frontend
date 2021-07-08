@@ -2,21 +2,21 @@
   Color Variables
   ---------------
 */
-$color-primary: #1b1940;
-$color-primary-light: #252740;
-$color-secondary: #0093dd;
-$color-grey: #ebeaf2;
+$color-primary: #0202cb;
+$color-secondary: #ff6300;
+$color-tertiary: #b806cc;
+$color-tertiary-dark: #45024c;
 $color-white: #ffffff;
 $color-black: #000000;
 /*
   Font Variables
   --------------
 */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 $font-primary: 'Nunito', sans-serif;
-$font-secondary: 'Cormorant Garamond', serif;
+$font-secondary: 'BenchNine', sans-serif;
 /* 
   Mixins 
   ------
@@ -79,7 +79,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; //10px/16px = 62.5% 1rem
   @media all and (max-width: 480px) {
-    font-size: 45%;
+    font-size: 48%;
   }
 
   @media all and (min-width: 480px) and (max-width: 576px) {
