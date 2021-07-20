@@ -9,7 +9,7 @@
   font-family: $font-primary;
   outline: none;
   border: 0px;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   & a {
     color: $color-white !important;
@@ -19,7 +19,7 @@
 .select {
   height: 5.6rem;
   background-color: $color-white;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   border: 0.2rem solid $color-primary;
   padding-left: 1.6rem;
   font-family: $font-primary;
@@ -30,7 +30,7 @@
 .input {
   height: 5.6rem;
   background-color: $color-white;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   border: 0.2rem solid $color-primary;
   padding-left: 1.6rem;
   font-family: $font-primary;
@@ -44,7 +44,7 @@
 
 .textarea {
   background-color: $color-white;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   border: 0.2rem solid $color-primary;
   padding-top: 1.6rem;
   padding-left: 1.6rem;
@@ -60,7 +60,9 @@
   height: 0.2rem;
   border: none;
   background-color: $color-secondary;
-  margin: 1.6rem 0;
+  margin: 0 0 1.6rem 0;
+  width: 8rem;
+  // border: 2px solid red;
 }
 
 .container {
@@ -90,10 +92,12 @@
 }
 
 .container-works {
-  background-color: rgba($color-tertiary, 0.02);
+  background-color: $color-base;
   @media (min-width: 320px) and (max-width: 576px) {
-    background-color: rgba($color-tertiary, 0.05);
+    // background-color: rgba($color-tertiary, 0.05);
   }
+}
+.container-mission {
 }
 
 .svg {

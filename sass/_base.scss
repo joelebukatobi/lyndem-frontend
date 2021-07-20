@@ -8,6 +8,7 @@ $color-tertiary: #b806cc;
 $color-tertiary-dark: #45024c;
 $color-white: #ffffff;
 $color-black: #000000;
+$color-base: #fefdff;
 /*
   Font Variables
   --------------
@@ -104,3 +105,12 @@ body {
   font-family: $font-primary;
   line-height: 1.6;
 }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   line-height: 1;
+// }
