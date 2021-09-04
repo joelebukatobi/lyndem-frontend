@@ -1,0 +1,53 @@
+.services {
+  padding: 8rem 0 8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__game {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  &__section {
+    width: 48%;
+
+    & .paragraph {
+      margin-bottom: 1.6rem;
+      width: 90%;
+      text-align: justify;
+    }
+    &__image {
+      border-radius: 0.3rem;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    width: 100%;
+    padding: 8rem 3.2rem 8rem 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    &__game {
+      flex-direction: column-reverse;
+      padding: 0 3.2rem;
+    }
+    &__section {
+      // padding-left: 3.2rem;
+      // padding-right: 3.2rem;
+      & .heading-2 {
+        text-align: center;
+      }
+      & .paragraph {
+        width: 100%;
+      }
+      & .separator {
+        margin: 1.6rem auto;
+      }
+      &__image {
+        width: 100%;
+      }
+    }
+    & > * {
+      width: 100%;
+    }
+  }
+}

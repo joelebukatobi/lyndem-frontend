@@ -1,0 +1,8 @@
+@mixin mb-8 {
+  margin-bottom: 8rem;
+}
+
+@mixin mb-reduce-8 {
+  margin-bottom: -8rem;
+  flex-direction: column-reverse;
+}

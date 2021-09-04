@@ -239,12 +239,16 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    &__card {
+    & a {
       width: 31.5%;
+      cursor: pointer;
+    }
+    &__card {
+      height: 100%;
+      width: 100%;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
-      // padding: 1rem;
       background-color: $color-white;
       &__image {
         border-top-left-radius: 0.5rem;
@@ -280,8 +284,13 @@
     &__row {
       flex-direction: column;
       & > * {
+        border: 2 px solid red;
         width: 100%;
         margin-bottom: 4.8rem;
+      }
+
+      & a {
+        width: 100%;
       }
       &__card {
         &__image {
@@ -400,6 +409,7 @@
         &__image {
           height: 16rem;
           width: 100%;
+          margin-bottom: 0;
           & img {
             height: 100%;
             width: 100%;
