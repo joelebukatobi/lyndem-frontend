@@ -13,18 +13,22 @@
       margin-bottom: 2.4rem;
       width: 90%;
     }
-    & li {
-      list-style: none;
-      font-size: 1.6rem;
-      font-weight: 400;
-      &:not(:last-child) {
-        margin-bottom: 1.6rem;
-      }
-      & svg {
-        height: 5rem;
-        width: 5rem;
-        margin-right: 1.6rem;
-        stroke: $color-white;
+    &__list {
+      &__item {
+        display: flex;
+        align-items: flex-start;
+        list-style: none;
+        font-size: 1.6rem;
+        font-weight: 400;
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+        & svg {
+          height: 2.4rem;
+          width: 2.4rem;
+          margin-right: 0.8rem;
+          stroke: $color-white;
+        }
       }
     }
   }
