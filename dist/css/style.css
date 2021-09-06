@@ -409,84 +409,60 @@ li {
         order: 3; } }
 
 .header {
-  padding: 8rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  height: 70rem;
   position: relative; }
-  .header__decor {
-    position: absolute;
-    height: 4rem;
-    width: 4rem; }
-    .header__decor:nth-of-type(1) {
-      top: 16rem;
-      left: 8rem; }
-    .header__decor:nth-of-type(2) {
-      top: 16rem;
-      right: 8rem; }
-    .header__decor:nth-of-type(3) {
-      bottom: 16rem;
-      left: 8rem; }
-    .header__decor:nth-of-type(4) {
-      bottom: 16rem;
-      right: 8rem; }
-    .header__decor:nth-of-type(5) {
-      top: 8rem;
-      right: 26rem; }
-    .header__decor:nth-of-type(6) {
-      bottom: 8rem;
-      right: 26rem; }
-  .header__left {
+
+.header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden; }
+
+.header__bg__image {
+  margin-top: -30rem;
+  width: 100%; }
+
+.header__text {
+  position: absolute;
+  height: 28rem;
+  width: 64em;
+  bottom: 8rem;
+  padding: 7.2rem 2.4rem 2.4rem 4rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem; }
+
+.header__text .heading-1 {
+  color: #0202cb; }
+
+.header__text .paragraph {
+  width: 75%; }
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .header {
     display: flex;
-    width: 45%;
-    height: 80rem;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding: 3.2rem;
+    width: 100vw; }
+  .header__bg {
+    width: 100%; }
+  .header__bg__image {
+    margin-top: 0;
+    margin-left: -10rem;
+    width: 150%;
+    height: 100%; }
+  .header__text {
     position: relative;
-    padding: 2.4rem; }
-    .header__left::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      content: '';
-      background-color: #ffefe6;
-      border-radius: 0.3rem; }
-  .header__right {
-    width: 50%;
-    display: flex;
-    justify-content: space-between; }
-    .header__right__image {
-      width: 47%;
-      border-radius: 0.3rem; }
-      .header__right__image:nth-of-type(1) {
-        margin-top: 8rem;
-        margin-right: 3.2rem; }
-      .header__right__image:nth-of-type(2) {
-        margin-bottom: 8rem; }
-  @media (min-width: 320px) and (max-width: 576px) {
-    .header {
-      padding: 0 2.4rem 4.8rem 2.4rem;
-      flex-direction: column; }
-      .header__decor {
-        position: absolute;
-        height: 4.8rem;
-        width: 4.8rem; }
-      .header__left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%; }
-      .header__right {
-        margin-top: 4.8rem;
-        width: 100%; }
-        .header__right__image:nth-of-type(1) {
-          margin-top: 4.8rem;
-          margin-right: 1.6rem; }
-        .header__right__image:nth-of-type(2) {
-          margin-bottom: 4.8rem; } }
+    width: 100%;
+    border: 2px solid reds;
+    padding: 3.2rem;
+    height: unset;
+    bottom: 0; }
+  .header__text .paragraph {
+    width: 100%; } }
 
 .about-us {
   padding: 12rem 0 8rem 0;
@@ -612,8 +588,11 @@ li {
       .works__row {
         flex-direction: column; }
         .works__row > * {
+          border: 2 px solid red;
           width: 100%;
           margin-bottom: 4.8rem; }
+        .works__row a {
+          width: 100%; }
         .works__row__card__image {
           height: 40rem; }
         .works__row__card__text {
@@ -1077,3 +1056,40 @@ li {
     padding: 8rem 0;
     width: 100%;
     border: 2px solid red; }
+
+.services {
+  padding: 8rem 0 8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .services__game {
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+  .services__section {
+    width: 48%; }
+    .services__section .paragraph {
+      margin-bottom: 1.6rem;
+      width: 90%;
+      text-align: justify; }
+    .services__section__image {
+      border-radius: 0.3rem;
+      width: 100%; }
+  @media (min-width: 320px) and (max-width: 576px) {
+    .services {
+      width: 100%;
+      padding: 8rem 3.2rem 8rem 3.2rem;
+      flex-direction: column;
+      justify-content: center; }
+      .services__game {
+        flex-direction: column-reverse;
+        padding: 0 3.2rem; }
+      .services__section .heading-2 {
+        text-align: center; }
+      .services__section .paragraph {
+        width: 100%; }
+      .services__section .separator {
+        margin: 1.6rem auto; }
+      .services__section__image {
+        width: 100%; }
+      .services > * {
+        width: 100%; } }
