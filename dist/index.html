@@ -6,6 +6,8 @@
  <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png" />
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  <link rel="stylesheet" href="css/style.css">
  <title>Lyndem Edutainment</title>
 </head>
@@ -128,7 +130,7 @@
         <image href="images/icon-check.svg" />
        </svg>
       </div>
-      <h4 class="heading-4">Game Schooling <br>(School Visits)</h4>
+      <h4 class="heading-4">Game Schooling (School Visits)</h4>
      </div>
      <div class="about-us__section__check__box">
       <div class="svg-container">
@@ -145,6 +147,9 @@
 
  <!-- Mission -->
  <div class="container container-mission">
+  <div class="mission__bg">
+   <img src="images/section-bg.png" alt="">
+  </div>
   <div class="mission">
    <div class="mission__section">
     <h2 class="heading-2">Mission</h2>
@@ -215,7 +220,13 @@
 
  <!-- Game Schooling -->
  <div class="container container-mission">
+  <div class="mission__bg">
+   <img src="images/section-game-bg.png" alt="">
+  </div>
   <div class="game">
+   <div class="game__section">
+    <img class="game__section__image" src="images/game-schooling-image.png" alt="">
+   </div>
    <div class="game__section">
     <h2 class="heading-2">Game Schooling</h2>
     <hr class="separator">
@@ -224,9 +235,6 @@
      <br><br>
      At Lyndem Edutainment we use games to teach educational and life skills.
     </p>
-   </div>
-   <div class="game__section">
-    <img class="game__section__image" src="images/game-schooling-image.png" alt="">
    </div>
   </div>
  </div>
@@ -279,7 +287,8 @@
  <!-- Banner -->
  <div class="banner">
   <div class="banner__bg">
-   <video class="banner__bg__video" autoplay muted loop class="banner-video" src="video/video.mp4"></video>
+   <video id="video" class="banner__bg__video" autoplay muted loop class="banner-video" src="video/video-two.mp4"></video>
+   <!-- <img src="images/header-image-two.jpg" alt="" id="banner__image" class="banner__bg__video"> -->
   </div>
   <div class="container">
    <div class="banner__text">
@@ -304,22 +313,59 @@
    </div>
    <div class="gallery__carousel owl-carousel owl-theme">
     <div class="item">
-     <img src="images/about-image.jpg" alt="">
+     <a href="images/gallery/gallery-one.jpeg" data-fancybox="gallery">
+      <img src=" images/gallery/gallery-one.jpeg" alt="">
+     </a>
     </div>
     <div class="item">
-     <img src="images/about-image.jpg" alt="">
+     <a href="images/gallery/gallery-two.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-two.jpg" alt="">
+     </a>
     </div>
     <div class="item">
-     <img src="images/about-image.jpg" alt="">
+     <a href="images/gallery/gallery-three.png" data-fancybox="gallery">
+      <img src="images/gallery/gallery-three.png" alt="">
+     </a>
     </div>
     <div class="item">
-     <img src="images/about-image.jpg" alt="">
+     <a href="images/gallery/gallery-four.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-four.jpg" alt="">
+     </a>
     </div>
     <div class="item">
-     <img src="images/about-image.jpg" alt="">
+     <a href="images/gallery/gallery-five.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-five.jpg" alt="">
+     </a>
     </div>
     <div class="item">
-     <img src="images/about-image.jpg" alt="">
+     <a href="images/gallery/gallery-six.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-six.jpg" alt="">
+     </a>
+    </div>
+    <div class="item">
+     <a href="images/gallery/gallery-seven.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-seven.jpg" alt="">
+     </a>
+    </div>
+    <div class="item">
+     <a href="images/gallery/gallery-eight.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-eight.jpg" alt="">
+     </a>
+    </div>
+    <div class="item">
+     <a href="images/gallery/gallery-nine.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-nine.jpg" alt="">
+     </a>
+    </div>
+    <div class="item">
+     <a href="images/gallery/gallery-ten.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-ten.jpg" alt="">
+     </a>
+    </div>
+    <div class="item">
+     <a href="images/gallery/gallery-eleven.jpg" data-fancybox="gallery">
+      <img src="images/gallery/gallery-eleven.jpg" alt="">
+     </a>
     </div>
    </div>
   </div>
@@ -382,18 +428,20 @@
         <li class="footer__row__columns__column__list__item">
          Suite A6, Kabom Court, <br> Plot 104 Gado Nasko Road
          (2/1) <br> By Phase IV Bridge, Opposite Unity Clinic.
-         <br>Kubwa, Abuja
+         Kubwa, Abuja
         </li>
-        <li class="footer__row__columns__column__list__item">
-         <svg class="svg">
-          <image href="images/icon-phone.svg" />
-         </svg>08025182324
-        </li>
-        <li class="footer__row__columns__column__list__item">
-         <svg class="svg">
-          <image href="images/icon-phone.svg" />
-         </svg>08094931619
-        </li>
+        <div class="footer__row__columns__column__list__group">
+         <li class="footer__row__columns__column__list__item">
+          <svg class="svg">
+           <image href="images/icon-phone.svg" />
+          </svg>08025182324
+         </li>
+         <li class="footer__row__columns__column__list__item">
+          <svg class="svg">
+           <image href="images/icon-phone.svg" />
+          </svg>08094931619
+         </li>
+        </div>
        </ul>
       </div>
      </div>
@@ -410,6 +458,8 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="js/index.js"></script>
 
 </html>

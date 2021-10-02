@@ -36,6 +36,22 @@
   font-family: $font-primary;
   font-size: 1.6rem;
   font-weight: 500;
+  &::-webkit-input-placeholder {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+  }
+  &::-moz-placeholder {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+  }
+  &:-ms-input-placeholder {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+  }
+  &::-ms-input-placeholder {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+  }
   &::placeholder {
     font-family: $font-primary;
     font-size: 1.6rem;
@@ -50,6 +66,22 @@
   padding-left: 1.6rem;
   font-size: 1.6rem;
   font-family: $font-primary;
+  &::-webkit-input-placeholder {
+    font-size: 1.6rem;
+    // color: $color-grey;
+  }
+  &::-moz-placeholder {
+    font-size: 1.6rem;
+    // color: $color-grey;
+  }
+  &:-ms-input-placeholder {
+    font-size: 1.6rem;
+    // color: $color-grey;
+  }
+  &::-ms-input-placeholder {
+    font-size: 1.6rem;
+    // color: $color-grey;
+  }
   &::placeholder {
     font-size: 1.6rem;
     // color: $color-grey;

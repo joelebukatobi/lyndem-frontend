@@ -36,6 +36,10 @@
       font-weight: 600;
       font-size: 1.4rem;
     }
+
+    & .button__active {
+      background-color: $color-secondary;
+    }
     &__list {
       margin: 0;
       padding-left: 0;
@@ -97,7 +101,20 @@
           padding: 0;
 
           &__hide {
+            -webkit-animation: bar-hide 1s linear forwards;
             animation: bar-hide 1s linear forwards;
+          }
+
+          @-webkit-keyframes bar-hide {
+            0% {
+              width: 0px;
+              height: 0px;
+            }
+
+            100% {
+              width: 0px;
+              height: 0px;
+            }
           }
 
           @keyframes bar-hide {
@@ -113,7 +130,22 @@
           }
 
           &__cross {
+            -webkit-animation: bar-cross-left 0.5s linear forwards;
             animation: bar-cross-left 0.5s linear forwards;
+          }
+
+          @-webkit-keyframes bar-cross-left {
+            10% {
+              transform: rotate(45deg) translate(4px, 4px);
+            }
+
+            50% {
+              transform: rotate(45deg) translate(7px, 7px);
+            }
+
+            100% {
+              transform: rotate(45deg) translate(3px, 2px);
+            }
           }
 
           @keyframes bar-cross-left {
@@ -131,7 +163,22 @@
           }
 
           &__across {
+            -webkit-animation: bar-cross-right 0.5s linear forwards;
             animation: bar-cross-right 0.5s linear forwards;
+          }
+
+          @-webkit-keyframes bar-cross-right {
+            10% {
+              transform: rotate(-45deg);
+            }
+
+            60% {
+              transform: rotate(-45deg) translate(-3px, 3px);
+            }
+
+            100% {
+              transform: rotate(-45deg) translate(1px, -2px);
+            }
           }
 
           @keyframes bar-cross-right {
@@ -248,6 +295,14 @@
         }
         &__list {
           list-style: none;
+          &__group {
+            display: flex;
+            & > * {
+              &:not(:last-child) {
+                margin-right: 0.8rem;
+              }
+            }
+          }
           & > * {
             &:not(:last-child) {
               margin-bottom: 0.8rem;
