@@ -3,9 +3,7 @@ let navItems = document.querySelector('.navbar__nav');
 let header = document.querySelector('.navbar');
 let barHide = document.querySelector('.navbar__mobile__menu__bar:nth-child(1)');
 let barLeft = document.querySelector('.navbar__mobile__menu__bar:nth-child(2)');
-let barRight = document.querySelector(
-  '.navbar__mobile__menu__bar:nth-child(3)'
-);
+let barRight = document.querySelector('.navbar__mobile__menu__bar:nth-child(3)');
 
 menuButton.onclick = openMenu;
 
@@ -32,7 +30,7 @@ $('.gallery__carousel').owlCarousel({
   nav: true,
   dots: false,
   autoplay: true,
-  // autoplaySpeed: 10000,
+  autoplaySpeed: 3000,
   autoplayHoverPause: true,
   responsive: {
     0: {
@@ -48,5 +46,14 @@ $('.gallery__carousel').owlCarousel({
       nav: true,
       loop: false,
     },
+  },
+});
+
+AOS.init();
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+  slideShow: {
+    autoStart: true,
+    speed: 5000,
   },
 });
