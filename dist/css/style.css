@@ -392,6 +392,8 @@ li {
           color: #000000 !important;
           border: none;
           font-weight: 400; }
+        .navbar__nav .button__active {
+          background-color: #ffffff; }
         .navbar__nav__toggle {
           display: block; }
         .navbar__nav__list {
