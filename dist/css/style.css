@@ -539,7 +539,7 @@ li {
           width: 100%; } }
 
 .about-us {
-  padding: 8rem 0 8rem 0;
+  padding: 12rem 0 4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -880,7 +880,7 @@ li {
   width: 100%; }
   .about__heading {
     width: 100%;
-    height: 40em;
+    height: 40rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -909,6 +909,9 @@ li {
         color: #ffffff; }
       .about__heading__text a:hover {
         color: #b806cc; }
+  @media (min-width: 320px) and (max-width: 576px) {
+    .about__heading {
+      height: 25rem; } }
 
 .history {
   padding: 8rem 0 0 0; }

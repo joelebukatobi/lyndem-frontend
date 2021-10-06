@@ -49,7 +49,9 @@ $('.gallery__carousel').owlCarousel({
   },
 });
 
-AOS.init();
+AOS.init({
+  delay: 5000,
+});
 
 Fancybox.bind('[data-fancybox="gallery"]', {
   slideShow: {
