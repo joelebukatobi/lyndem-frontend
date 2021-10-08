@@ -301,6 +301,7 @@
         }
         &__list {
           list-style: none;
+          color: $color-white;
           &__group {
             display: flex;
             & > * {
@@ -356,7 +357,6 @@
     &__row {
       &__columns {
         flex-direction: row-reverse;
-        border: 2px solid red;
         &__column {
           &__header {
             margin-bottom: 1.6rem;
@@ -364,7 +364,6 @@
           &__list {
             display: flex;
             flex-direction: column;
-            border: 2px solid green;
             &__item:nth-of-type(1) {
               margin-top: 1.6rem;
               // order: 3;
