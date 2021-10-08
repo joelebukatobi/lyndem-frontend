@@ -98,12 +98,12 @@
     <img src="images/contact-image.svg" alt="">
    </div>
    <form class="contact__form" action="POST" data-netlify="true">
-    <input class="input" type="name" placeholder="John Doe">
-    <input class="input" type="email" placeholder="example@mail.com">
-    <input class="input" type="text" placeholder="Subject: Possible Play Date ">
-    <textarea class="textarea" name="messages" id="messages" rows="5" placeholder="Hi, I'd like to talk to you about a play date sessions for about 5 kids"></textarea>
+    <input class="input" type="name" id="name" placeholder="John Doe">
+    <input class="input" type="email" id="email" placeholder="example@mail.com">
+    <!-- <input class="input" type="text" placeholder="Subject: Possible Play Date "> -->
+    <textarea class="textarea" name="message" id="message" rows="5" placeholder="Hi, I'd like to talk to you about a play date sessions for about 5 kids"></textarea>
     <div data-netlify-recaptcha="true"></div>
-    <button class="btn">Send</button>
+    <button type="submit" class="btn" value="Send Message">Send</button>
    </form>
   </div>
  </div>
