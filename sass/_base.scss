@@ -57,7 +57,7 @@ input:hover,
 input:focus,
 input:active {
   outline: none;
-  background-color: transparent;
+  background-color: $color-white;
 }
 
 input::-webkit-input-placeholder {
@@ -110,7 +110,7 @@ button:hover,
 button:focus,
 button:active {
   outline: none;
-  background-color: transparent;
+  background-color: $color-secondary;
 }
 
 html {
