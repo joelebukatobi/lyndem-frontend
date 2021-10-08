@@ -306,7 +306,7 @@
             display: flex;
             & > * {
               &:not(:last-child) {
-                margin-right: 0.8rem;
+                margin-right: 1.6rem;
               }
             }
           }
@@ -318,6 +318,9 @@
           &__item {
             display: flex;
             align-items: flex-end;
+            & svg {
+              margin-right: 0.8rem;
+            }
             &__link {
               color: $color-white;
             }
@@ -354,6 +357,7 @@
         width: 16rem;
       }
     }
+
     &__row {
       &__columns {
         flex-direction: row-reverse;
