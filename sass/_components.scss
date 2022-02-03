@@ -125,6 +125,7 @@
 
 .container-works {
   background-color: $color-base;
+  // max-width: unset;
   @media (min-width: 320px) and (max-width: 576px) {
     // background-color: rgba($color-tertiary, 0.05);
   }
